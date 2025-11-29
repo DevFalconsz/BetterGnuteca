@@ -76,3 +76,5 @@ A aplicação estará disponível em `http://localhost:4200`.
 ## Como Usar o Projeto Completo
 
 Para usar o projeto completo, tanto o backend quanto o frontend devem estar em execução. Siga os passos de execução para ambas as partes do projeto. O frontend irá se conectar automaticamente ao backend para buscar e enviar dados.
+
+Para um Download completo do projeto poderá baixar o .zip completo do projeto aqui: [public(FINAL).zip](https://drive.google.com/file/d/1SzKEAG8lSjP-ew4Mmvju8lmsvCBkQsJX/view?usp=sharing)
