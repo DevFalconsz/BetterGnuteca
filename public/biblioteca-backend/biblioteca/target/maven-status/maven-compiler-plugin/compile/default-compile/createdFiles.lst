@@ -1,0 +1,14 @@
+com/biblioteca/config/CorsConfig$1.class
+com/biblioteca/repository/BookRepository.class
+com/biblioteca/model/Author.class
+com/biblioteca/dto/BookDTO.class
+com/biblioteca/repository/AuthorRepository.class
+com/biblioteca/controller/AuthorController.class
+com/biblioteca/dto/AuthorDTO.class
+com/biblioteca/service/BookService.class
+com/biblioteca/controller/BookController.class
+com/biblioteca/config/CorsConfig.class
+com/biblioteca/BibliotecaApplication.class
+com/biblioteca/exception/ResourceNotFoundException.class
+com/biblioteca/model/Book.class
+com/biblioteca/service/AuthorService.class
