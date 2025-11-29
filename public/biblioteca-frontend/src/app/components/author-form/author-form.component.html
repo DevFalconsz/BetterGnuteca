@@ -1,0 +1,81 @@
+<div class="container mt-4">
+  <div class="page-header d-flex justify-content-between align-items-center">
+    <h2>
+      <i class="fas fa-user-plus"></i>
+      Novo Autor
+    </h2>
+    <button class="btn btn-outline-secondary" (click)="cancel()">
+      <i class="fas fa-arrow-left"></i>
+      Voltar
+    </button>
+  </div>
+
+  <div *ngIf="success" class="alert alert-success mt-3">
+    {{ success }}
+  </div>
+
+  <div *ngIf="error" class="alert alert-danger mt-3">
+    {{ error }}
+  </div>
+
+  <div class="card mt-3">
+    <div class="card-body">
+      <form [formGroup]="authorForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nome do Autor *</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            formControlName="name"
+            placeholder="Digite o nome do autor"
+            [class.is-invalid]="authorForm.get('name')?.invalid && authorForm.get('name')?.touched">
+          <div *ngIf="authorForm.get('name')?.invalid && authorForm.get('name')?.touched" class="invalid-feedback">
+            <div *ngIf="authorForm.get('name')?.errors?.['required']">O nome é obrigatório.</div>
+            <div *ngIf="authorForm.get('name')?.errors?.['minlength']">O nome deve ter pelo menos 2 caracteres.</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+          <input
+            type="date"
+            class="form-control"
+            id="dataNascimento"
+            formControlName="dataNascimento">
+        </div>
+
+        <div class="mb-3">
+          <label for="nacionalidade" class="form-label">Nacionalidade</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nacionalidade"
+            formControlName="nacionalidade"
+            placeholder="Digite a nacionalidade">
+        </div>
+
+        <div class="mb-3">
+          <label for="biografia" class="form-label">Biografia</label>
+          <textarea
+            class="form-control"
+            id="biografia"
+            formControlName="biografia"
+            rows="4"
+            placeholder="Digite a biografia do autor"></textarea>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn btn-secondary me-2" (click)="cancel()" [disabled]="loading">
+            Cancelar
+          </button>
+          <button type="submit" class="btn btn-primary" [disabled]="authorForm.invalid || loading">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm"></span>
+            <i *ngIf="!loading" class="fas fa-save"></i>
+            Salvar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
