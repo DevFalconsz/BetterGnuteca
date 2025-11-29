@@ -1,0 +1,16 @@
+{
+  "/api/books": {
+    "target": "http://localhost:8080",
+    "secure": false,
+    "pathRewrite": {
+      "^/api/books": "/books"
+    }
+  },
+  "/api/authors": {
+    "target": "http://localhost:8080",
+    "secure": false,
+    "pathRewrite": {
+      "^/api/authors": "/authors"
+    }
+  }
+}
